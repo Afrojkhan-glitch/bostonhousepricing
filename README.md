@@ -27,8 +27,8 @@ Explore the dataset to understand which neighbourhood factors are related to hou
 Train a regression model to predict house prices and evaluate how well it generalizes.
 
 #### Key Specifications
-- **Model**: [add the model(s) you used, e.g. Linear Regression]
-- **Evaluation**: [add your R², RMSE and MAE here]
+- **Model**: [Linear Regression]
+- **Evaluation**: [0.71]
 - **Saved Model**: `regmodel.pkl`
 
 ---
