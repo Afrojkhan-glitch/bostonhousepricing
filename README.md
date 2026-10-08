@@ -43,9 +43,9 @@ Given features of a Boston suburb, such as crime rate, average number of rooms, 
 
 ## Results
 
-| Model | R² Score | RMSE |
+| Model | R² Score |
 |-------|----------|------|
-| [Linear Regression] | [CHANGE THIS] | [CHANGE THIS] |
+| [Linear Regression] | [0.7112260057484932] |
 
 ## Project Structure
 
