@@ -4,4 +4,4 @@ numpy
 matplotlib
 seaborn
 python
-jupyter notebook
+jupyter_notebook
