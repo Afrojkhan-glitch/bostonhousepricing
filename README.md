@@ -45,8 +45,7 @@ bostonhousepricing/
 │   └── boston.csv
 ├── notebooks/
 │   └── boston_house_price_analysis.ipynb
-├── models/
-│   └── regmodel.pkl
+├── regmodel.pkl
 ├── requirements.txt
 ├── LICENSE
 └── README.md
