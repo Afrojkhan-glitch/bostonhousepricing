@@ -1,71 +1,94 @@
 # Boston House Price Prediction
 
-Welcome to the **Boston House Price Prediction** project! 🏠
-This project builds a machine learning regression model that predicts the median value of houses in Boston neighbourhoods from 13 housing and neighbourhood features. It is a portfolio project that covers data cleaning, exploratory analysis, model training and evaluation.
+A machine learning project that predicts median house prices in Boston suburbs using regression models built with Python and scikit-learn.
 
----
+> **Note on the dataset:** The Boston Housing dataset contains a feature (`B`) derived from racial demographics and has been removed from scikit-learn for ethical reasons. This project uses it for learning purposes only and should not be used for real-world pricing decisions.
 
-## Project Requirements
+## Problem Statement
 
-### 1. Data Analysis (Data Analytics)
+Given features of a Boston suburb (crime rate, number of rooms, distance to employment centres, etc.), predict the median home value (`MEDV`, in $1000s).
 
-#### Objectives
-Explore the dataset to understand which neighbourhood factors are related to house prices.
+## Dataset
 
-#### Key Specifications
-- **Data Source**: `boston.csv` in this repository, with 506 rows and 13 features.
-- **Target**: House price (`MEDV`, median home value in $1000s).
-- **Features**: CRIM, ZN, INDUS, CHAS, NOX, RM, AGE, DIS, RAD, TAX, PTRATIO, B, LSTAT.
-- **Data Quality**: No missing values. The header was fixed on load and all columns were converted to numeric.
-- **Findings**: Average number of rooms (RM) has a strong positive correlation with price (0.70), while PTRATIO (-0.51) and TAX (-0.47) are negatively correlated.
+- **Source:** [add source link, e.g. the original StatLib / Kaggle page]
+- **Rows:** 506
+- **Features:** 13 input features + 1 target (`MEDV`)
 
----
+| Feature | Description |
+|---------|-------------|
+| CRIM | Per-capita crime rate |
+| RM | Average number of rooms per dwelling |
+| LSTAT | % lower-status population |
+| ... | [add the rest you actually use] |
 
-### 2. Machine Learning Model (Data Science)
+## Approach
 
-#### Objectives
-Train a regression model to predict house prices and evaluate how well it generalizes.
+1. **Exploratory data analysis**: [summarize what you checked: missing values, distributions, correlations]
+2. **Preprocessing**: [e.g. train/test split, feature scaling with StandardScaler]
+3. **Models trained**: [e.g. Linear Regression, Ridge, Random Forest]
+4. **Evaluation**: R² score, RMSE, MAE on the held-out test set
 
-#### Key Specifications
-- **Model**: [Linear Regression]
-- **Evaluation**: [0.7112260057484932]
-- **Saved Model**: `regmodel.pkl`
+## Results
 
----
+| Model | R² | RMSE |
+|-------|----|------|
+| [Model 1] | [value] | [value] |
+| [Model 2] | [value] | [value] |
 
-## Repository Structure
+**Key takeaways:** [2 to 3 sentences: which features mattered most, which model won, what the limitations are]
+
+## Project Structure
+
 ```
 bostonhousepricing/
-│
-├── boston.csv           # Dataset
-├── project1.ipynb       # Analysis and model training notebook
-├── regmodel.pkl         # Trained model
-├── requirements.txt     # Python dependencies
-├── README.md            # Project overview
-└── LICENSE              # License information
+├── data/
+│   └── boston.csv
+├── notebooks/
+│   └── boston_house_price_analysis.ipynb
+├── models/
+│   └── regmodel.pkl
+├── requirements.txt
+├── LICENSE
+└── README.md
 ```
-
----
 
 ## How to Run
+
 ```bash
+# 1. Clone the repository
 git clone https://github.com/Afrojkhan-glitch/bostonhousepricing.git
 cd bostonhousepricing
-pip install -r requirements.txt jupyter
-jupyter notebook project1.ipynb
+
+# 2. Create a virtual environment (recommended)
+python -m venv venv
+source venv/bin/activate        # Windows: venv\Scripts\activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Open the notebook
+jupyter notebook notebooks/boston_house_price_analysis.ipynb
 ```
 
----
+## Tech Stack
 
-## Limitations
-The Boston housing dataset contains a feature `B` that is based on the racial composition of neighbourhoods, and it has been removed from scikit-learn for ethical reasons. This project uses it only for learning and practice, and the model should not be used for real housing decisions.
+- Python
+- pandas, NumPy
+- scikit-learn
+- Matplotlib / Seaborn
+- Jupyter Notebook
 
----
+## Limitations and Future Work
+
+- Small dataset (506 rows), so results may not generalize
+- Dataset has known ethical issues (see note above)
+- [ ] Try the California Housing dataset for comparison
+- [ ] Add hyperparameter tuning
+- [ ] Build and deploy a simple Streamlit app
 
 ## License
-This project is licensed under the Apache-2.0 License. See the [LICENSE](LICENSE) file for details.
 
----
+Distributed under the MIT License. See `LICENSE` for details.
 
 ## About Me
 Hi there! I'm **Afroj Ahmad Khan**, an aspiring data analyst with a growing interest in data science and machine learning.
