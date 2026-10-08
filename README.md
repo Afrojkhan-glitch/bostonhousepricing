@@ -28,7 +28,7 @@ Train a regression model to predict house prices and evaluate how well it genera
 
 #### Key Specifications
 - **Model**: [Linear Regression]
-- **Evaluation**: [0.71]
+- **Evaluation**: [0.7112260057484932]
 - **Saved Model**: `regmodel.pkl`
 
 ---
